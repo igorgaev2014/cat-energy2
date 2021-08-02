@@ -1,0 +1,123 @@
+.contacts {
+  background-color: var(--basic-grey);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    margin: auto;
+    padding: 0;
+    /* max-width: 1440px; */
+  }
+
+  &--index {
+    background-color: var(--basic-white);
+  }
+}
+
+.contacts__title {
+  margin: 0;
+  font-family: @font-primary;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding-left: 20px;
+  font-weight: normal;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 25px;
+    width: 170px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 171px;
+    padding: 0;
+  }
+}
+
+.contacts__address {
+  color: var(--special-dark-grey);
+  font-size: 14px;
+  line-height: 20px;
+  font-style: normal;
+  padding-right: 20px;
+  margin-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+    width: 160px;
+    margin-top: -20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 155px;
+    padding: 0;
+    text-align: left;
+  }
+}
+
+.contacts__map-wrapper {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin: 0 auto;
+  line-height: 0;
+  width: 100%;
+  background: url("../img/bg-map-mobile@1x.png") no-repeat center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-map-mobile@2x.png");
+  }
+
+  @media (min-width: @tablet-width) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    height: 400px;
+  }
+}
+
+.contacts__map {
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    height: 400px;
+  }
+}
+
+.contacts__info {
+  display: flex;
+  justify-content: space-between;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  align-items: center;
+  padding-top: 27px;
+  padding-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 50px;
+    padding-top: 65px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 95px;
+    background: var(--basic-white);
+    padding-top: 66px;
+    padding-left: 76px;
+    padding-bottom: 60px;
+    padding-right: 89px;
+    width: 405px;
+    left: 50%;
+    transform: translateX(-107%);
+  }
+}

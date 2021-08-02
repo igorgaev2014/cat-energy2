@@ -1,0 +1,49 @@
+.main-nav {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 66px;
+    margin-left: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+  }
+}
+
+.main-nav__toggle {
+  background: url("../img/icon-close.svg");
+  position: absolute;
+  right: 20px;
+  top: 23px;
+  width: 18px;
+  height: 18px;
+  border: none;
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 11px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    padding-top: 20px;
+  }
+}

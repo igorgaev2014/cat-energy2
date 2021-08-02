@@ -1,0 +1,111 @@
+.contacts-matching {
+  border: none;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 48px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 50px;
+  }
+}
+
+.contacts-matching__list {
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 12px;
+    margin-top: 6px;
+    margin-left: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 78px;
+    margin: 0;
+    padding: 0;
+    padding-top: 5px;
+  }
+}
+
+.contacts-matching__item {
+  margin-bottom: 13px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  position: relative;
+
+  &--email {
+    &::after {
+      content: "";
+      width: 20px;
+      height: 14px;
+      background-image: url("../img/icon-mail.svg");
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--phone {
+    &::after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-image: url("../img/icon-phone.svg");
+      position: absolute;
+      top: 15px;
+      right: 18px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+    column-gap: 7px;
+  }
+}
+
+.contacts-matching__label {
+  font-family: @font-primary;
+  color: var(--special-dark-grey);
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  white-space: nowrap;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.contacts-matching__input {
+  font-family: @font-primary;
+  color: var(--special-dark-grey);
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 13px;
+  width: 100%;
+  border: 1px solid var(--basic-grey-3);
+
+  &:focus {
+    border-color: var(--basic-black);
+  }
+
+  &:invalid {
+    border-color: var(--status-error);
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    margin-left: 10px;
+    height: 52px;
+  }
+}

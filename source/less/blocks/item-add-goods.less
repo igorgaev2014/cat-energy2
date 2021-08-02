@@ -1,0 +1,105 @@
+.item-add-goods {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 27px;
+    padding-bottom: 25px;
+    padding-left: 37px;
+    padding-right: 37px;
+    border: 1px solid var(--special-grey);
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-left: none;
+    border-right: none;
+    margin: 0;
+    padding: 15px 0;
+    align-items: center;
+  }
+}
+
+.item-add-goods__title {
+  font-family: @font-primary;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    margin-bottom: 29px;
+    font-weight: normal;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    margin: 0;
+  }
+}
+
+.item-add-goods__list {
+  color: var(--special-dark-grey);
+  font-size: 14px;
+  line-height: 14px;
+  display: flex;
+  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    margin-left: auto;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    margin: 0;
+    margin-right: 40px;
+    margin-top: 10px;
+  }
+}
+
+.item-add-goods__button {
+  color: var(--basic-white);
+  background-color: var(--basic-green);
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  height: 26px;
+  align-items: center;
+
+  &:active {
+    color: var(--button-active);
+    opacity: 1;
+    background-color: var(--basic-grey);
+  }
+
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 3;
+    width: 244px;
+    margin-left: auto;
+    padding-bottom: 6px;
+  }
+}
+
+.item-add-goods__number {
+  @media (min-width: @tablet-width) {
+    margin-right: 20px;
+  }
+}

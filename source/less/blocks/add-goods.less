@@ -1,0 +1,110 @@
+.add-goods {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100vw;
+      right: 0;
+      top: 16px;
+      z-index: 0;
+      height: 2px;
+      background-color: var(--basic-green);
+    }
+  }
+}
+
+.add-goods__wrapper {
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 1220px;
+  border-top: 1px solid var(--special-border);
+  padding-top: 28px;
+  padding-bottom: 38px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+    margin-bottom: 77px;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 73.5% 20%;
+    column-gap: 80px;
+  }
+}
+
+.add-goods__title {
+  font-family: @font-primary;
+  font-size: 24px;
+  line-height: 24px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 35px;
+  font-weight: normal;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: calc(100% - 227px);
+    height: 2px;
+    right: -20px;
+    top: 14px;
+    background-color: var(--basic-green);
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    margin: 0;
+    background-color: var(--basic-white);
+    display: inline-block;
+    padding-left: 37px;
+    padding-right: 37px;
+    margin-bottom: 85px;
+    margin-left: -38px;
+
+    &::before {
+      display: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      justify-self: start;
+    }
+  }
+}
+
+.add-goods__list {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 39px;
+  list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row-start: 2;
+    margin-bottom: 0;
+  }
+}
+
+.add-goods__item {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--special-border);
+  border-bottom: 1px solid var(--special-border);
+  padding-top: 13px;
+  padding-bottom: 16px;
+}
+
+.add-goods__all {
+  @media (min-width: @desktop-width) {
+    grid-row-start: 2;
+  }
+}

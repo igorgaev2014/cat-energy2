@@ -1,0 +1,205 @@
+.promo {
+  @media (min-width: @desktop-width) {
+    background: linear-gradient(to right, var(--basic-white), var(--basic-white) 50%, var(--basic-green-2) 50%, var(--basic-green-2) 100%);
+    z-index: 10;
+  }
+}
+
+.promo__wrapper {
+  font-family: @font-primary;
+  color: var(--basic-white);
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: var(--basic-green-2);
+  margin: 0;
+  padding: 0 20px;
+  padding-top: 26px;
+  height: 275px;
+  margin-bottom: 175px;
+  position: relative;
+  z-index: 0;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+    background-image: none;
+    background-color: var(--basic-white);
+    padding-left: 109px;
+    padding-bottom: 360px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/index-can-desktop@1x.png");
+      background-repeat: no-repeat;
+      z-index: -1;
+      background-size: contain;
+      top: 200px;
+      right: 0;
+      width: 700px;
+      height: 600px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-can-desktop@2x.png");
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: auto;
+    max-width: 1220px;
+    background-image: none;
+    background-position: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 165px;
+    padding-top: 220px;
+    padding-bottom: 200px;
+    margin-bottom: 83px;
+    margin-top: -163px;
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: var(--basic-green);
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      z-index: -1;
+      background-size: contain;
+      top: -1px;
+      right: -12px;
+      width: 720px;
+      height: 696px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/index-can-desktop@1x.png");
+      background-repeat: no-repeat;
+      z-index: 0;
+      background-size: contain;
+      top: 142px;
+      right: 318px;
+      width: 552px;
+      height: 499px;
+      transition: .8s;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-can-desktop@2x.png");
+      }
+    }
+
+    &:hover::after {
+      transform: scale(1.03);
+    }
+  }
+}
+
+.promo__title {
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  margin-top: 0;
+  width: 249px;
+  font-weight: normal;
+
+  @media (min-width: @tablet-width) {
+    color: var(--basic-black);
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    margin: 0;
+    width: 414px;
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-bottom: 41px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: 12px;
+    margin-top: 5px;
+  }
+}
+
+.promo__description {
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    color: var(--basic-black);
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 49px;
+    text-align: left;
+    margin-left: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    margin-left: 12px;
+    margin-bottom: 51px;
+  }
+}
+
+.promo__button {
+  color: var(--basic-white);
+  background-color: var(--basic-green);
+  font-size: 14px;
+  line-height: 18px;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  z-index: 1;
+
+  &:active {
+    color: var(--button-active);
+    opacity: 1;
+    background-color: var(--basic-grey);
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    width: 244px;
+    margin-left: 5px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    margin-left: 12px;
+  }
+}
+
+.promo__image {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}

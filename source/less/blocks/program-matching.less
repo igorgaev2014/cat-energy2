@@ -16,6 +16,7 @@
   text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
+  transition: all 1s ease 0s;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -38,7 +39,7 @@
   }
 }
 
-.program-matching__input + label::before {
+.program-matching__input+label::before {
   content: "";
   position: absolute;
   left: -46px;
@@ -56,7 +57,7 @@
   }
 }
 
-.program-matching__input:checked + label::after {
+.program-matching__input:checked+label::after {
   content: "";
   position: absolute;
   top: 1px;

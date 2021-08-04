@@ -4,6 +4,7 @@
   line-height: 18px;
   text-transform: uppercase;
   padding-left: 44px;
+  transition: all 1s ease 0s;
 
   &:active {
     opacity: 0.3;
@@ -55,7 +56,7 @@
   }
 }
 
-.additional-matching__input + label::before {
+.additional-matching__input+label::before {
   content: "";
   position: absolute;
   left: -2px;
@@ -70,7 +71,7 @@
   }
 }
 
-.additional-matching__input:checked + label::after {
+.additional-matching__input:checked+label::after {
   content: "";
   position: absolute;
   top: 4px;

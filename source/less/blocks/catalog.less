@@ -43,10 +43,6 @@
   border-top: 1px solid var(--special-border);
   position: relative;
 
-  &:hover {
-    background-color: var(--special-grey-2);
-  }
-
   @media (min-width: @tablet-width) {
     background-color: var(--basic-grey);
     padding-left: 40px;
@@ -54,6 +50,12 @@
     padding-bottom: 35px;
     padding-top: 161px;
     border: none;
+    transition: all 0.5s ease 0s;
+
+    &:hover {
+      background-color: var(--special-grey-2);
+    }
+
     // padding: 234px 35px 40px 35px;//
   }
 
